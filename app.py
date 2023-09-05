@@ -2,6 +2,13 @@ from flask import Flask
 
 app = Flask("my app")
 
+posts = [
+    {
+        'titulo' : "TESTE 1",
+        'texto' : "teste do post"
+    }
+]
 @app.route('/')
-def hello ():
-    return "Hello, world!"
+def exibirEntradas ():
+    entradas = posts
+    return str(entradas)
